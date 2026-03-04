@@ -74,3 +74,8 @@ pip install fastapi uvicorn google-cloud-aiplatform python-dotenv pydantic
 
 # Iniciar o servidor
 uvicorn main:app --reload
+```
+
+```bash
+OBS: precisa de um arquivo .env na pasta raiz com as variáveis "PROJECT_ID" "LOCATION"
+```
