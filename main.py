@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 from pydantic import BaseModel
 from vertexai.generative_models import GenerativeModel
+from fastapi.responses import FileResponse
 
 # --- CONFIGURAÇÃO DO BACKEND (FastAPI) ---
 # O FastAPI cria os "endpoints" (rotas) para que o seu site
@@ -38,6 +39,10 @@ model=GenerativeModel("gemini-2.5-flash")
 class PromptRequest(BaseModel):
     prompt: str
     
+@app.get("/")
+def ler_index():
+    return FileResponse("index.html") # Coloque o nome do seu arquivo HTML aqui
+
 #Aqui é a rota que será chamado pelo Front
 @app.post("/chat")
 async def gerar_resposta(request: PromptRequest):
