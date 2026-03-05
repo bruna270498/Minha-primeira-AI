@@ -1,4 +1,4 @@
-# Projeto Full Stack: Chat Agente Gemini 2.5 Flash
+
 
 Este é um projeto completo de um Chatbot de Inteligência Artificial.  
 Ele utiliza um backend robusto em **Python (FastAPI)** para se conectar ao modelo **Gemini 2.5 Flash** através do **Google Vertex AI** e um frontend moderno e responsivo em **HTML5/JavaScript** com suporte a Markdown.
@@ -32,3 +32,4 @@ gcloud auth application-default login
 
 # Define o projeto padrão (recomendado)
 gcloud config set project SEU_PROJECT_ID_AQUI
+
